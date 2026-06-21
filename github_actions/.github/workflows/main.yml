@@ -1,0 +1,5 @@
+env:
+  My_VAR: my_value
+  name: test_workflow
+
+  #utilise la variable d'environnement ${{env.My_VAR}}

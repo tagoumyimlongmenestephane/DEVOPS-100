@@ -1,0 +1,31 @@
+pourquoi quand je prends ps son ouput est envoyé dans le grep et quand je prends date son output es pas envoyé dans le grep
+-- son résultat est directement passé dans le standart output
+
+grep est le moteur de recherche interne de ton terminal
+set - est pour l'execution du shell scipting
+ps -- affiche les processus en cours
+
+questions d'entretiens en shell:
+    1- commandes utilisées en shell
+    2 - ecrire un script shell pour afficher la liste de processus
+     #!/bin/bash
+     echo "Liste des processus en cours d'éxécution ;"
+     ps -ef
+
+    3 - ecrire un script pour afficher uniquement les erreurs d'un journal distant
+      #!/bin/bash
+      curl -s URL_DU_LOG | grep "ERROR"
+    4 - ecrire un script pour compte le nombre de lettres "s" dans Mississipi:
+       #!/bin/bash
+       x = "Mississipi"
+       echo -n "$x" | grep -o "s" | wc -1
+    5 - comment deburger un script shell
+        deboguer: set -x
+        desactiver: set +x
+    6 - crontab est utilisé pour programmer l'éxécution automatique de tâches 
+       à intervalles réguliers
+    7 - Inconvénients du Shell Scripting
+      1. Erreurs fréquents et coûteuses
+      2 - execution lente comparé au langage compilé comme C ou GO
+      3 - Utilisation excessive des processus
+      4 - Compléxité croissante ( tâche complexe, éxécuté avec python )

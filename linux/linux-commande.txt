@@ -1,0 +1,33 @@
+# Distribution linux
+1 -- ubuntu
+2 -- centos
+3 -- Debian
+
+# Machine local -------> ssh(secure shell) EC2(Elastic computer cloud)
+
+#kernel (coeur du systeme, bash/shell scripting)
+
+# daemons(programmes execute en arriere plan dans un SE, d)
+
+# fichier cache commence avec un point(., ls -la)
+
+gestionnnaire de package( yum, apt)
+
+# yum install/uninstall nom_du_fichier
+
+yum install nginx(serveur web, reverse proxy, load balancer)
+
+# systemctl (gérer les services de ma machine, systemctl action(status, restart, start, stop, reload, enable), le nom du service)
+
+Gestion system
+   -/bin, /sbin/, /lib/, /boot, /etc
+
+Gestion utilisateur
+   -/home, /root
+
+stockage des donnees
+   -/var, -/tmp, /srv
+
+# heberger un projet html, css, javascript sur notre EC2 en utilisant les commandes linux
+# ssh
+/usr/share/nginx
