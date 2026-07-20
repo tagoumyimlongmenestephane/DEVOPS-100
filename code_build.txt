@@ -1,0 +1,67 @@
+Application cloud9(vsc) ---- aws codecommit (git et github) --- aws codebuild ---> aws codedeploy --- aws codepipeline
+Rg--A ----Design--Implementation---test----deploy---monitorin&main
+# le code source doit etre regrouper et tester
+
+HLL(python, java) ----> code machine
+
+1----> compilation(byte code)
+2----> Linking(dependence et libs)
+3----> optimisation(performance)
+4----> packaging 
+
+TEST ------TEST UNITAIRES TEST D'UNTEGRATION, TEST PERFORMANCE
+# USE CASE DU CODEBUILD(jenkins, gitlab, github actions, etc...)
+
+  1---> CI/CD
+  2---> BUILDING ET PACKAGING DU SOFTWARE
+  3---> AUTOMATE TESTING
+  4---> IAC (INFRASTRUCTUR AS CODE)
+  5---> BUILDING DOCKER CONTAINER
+
+LES CAS D'UTILISATION DU aws CODEBUILD
+
+1----> CI/CD sc ----> BUILD ----> TEST----->DEPLOY----->MONITORING
+FICHIER LOG,
+
+2----> BUILDING AND PACKAGING THE SOFTWARE (buildspec.yaml) ----> artifact(config, exe,)
+yaml(Yet Another Markup Language)
+
+
+3----> Automate testing ( automatiser les test, fin rapport des test)
+          junit pour java
+          Nunit pour .Net
+
+CRUD      SELENIUM -----> RAPPORT TEST
+4----> IAC INFRASTRUCTUR AS CODE
+   ---VM(MACHINE VIRTUELLE) -----> manuellement ou automatiquement
+   Outils: aws cloudformation
+
+5----> building docker container
+
+
+buildspec.yaml
+
+     1--- version:
+     2--- phase :
+          ** install
+          ** pre_build
+          ** build
+          ** post_build
+          ** artefact (s3 bucket) ----> envoye a la prochaine phase
+
+BENEFICS DE AWS CODEBUILD
+       
+       1---> FULLY MANAGE
+       2---> EASY INTEGRATION WITH OTHERS AWS SERVICES
+       3---> FLEXIBILTY AND CUSTOMIZATION
+       4---> SECURITY (RBAC), IAM (IDENTITY ACCESS MANAGEMENT), ENCRYPTION, NETWORK SECURITY,
+                                                               VPC(VIRTUAL PRIVATE CLOUD)
+       5---> COST EFFECTIF  serverles(pay as you go)
+
+source ----> BUILD ----> TEST----> DEPLOY -----> MONITORING
+FAIT UN PROJET ---> REPO(GIT ET GITHUB) ---> AWS CODE BUILD ---> AWS S3 BUCKET(stockage)
+
+buildspec.yml version, install, pre_build, build, post_build et artefact
+
+SC(site statique)---> BUILD ----> Deploy (s3)
+                                                               

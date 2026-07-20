@@ -1,0 +1,39 @@
+#strategie de branches
+
+kubernetes 
+
+Repertoire: Master ou Main
+
+Master:calculator: ## designer l'ux: Master ##-----> release ( on envoi la branche release au client ni la branche master)
+|
+|
+features--add-number------> Tester------> renvoyer
+
+
+résumé:
+ Main et Master sont les branch les plus ajour
+
+ les branches features permettent d'ajouter d'autres fonctionnalités
+
+ la branche release delivre une version du projet au users
+
+ fixing branch
+
+ merger:
+    git cherry-pick id ( merge )
+    git merge 
+    git rebase
+
+ git switch
+ git log ( pour voir tous les commits )
+
+ pull request:
+
+ fork (permet de créer une image d'un projet)
+ fork et clone ( fork cloner sur github et clone sur la machine)
+
+ SERVICE IAM (service qui permet de manager les accès)
+
+ 123456789A_
+ 123456789B_
+ 

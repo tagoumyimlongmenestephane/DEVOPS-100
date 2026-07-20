@@ -19,8 +19,15 @@ yum install nginx(serveur web, reverse proxy, load balancer)
 
 # systemctl (gérer les services de ma machine, systemctl action(status, restart, start, stop, reload, enable), le nom du service)
 
+# cat concatenate (afficher le contenu du fichier, créer un fichier, fusionner plusieurs)
+
+# nginx sert les pages web
+
+# pwd (affiche le répertoire où on se trouve)
+
 Gestion system
    -/bin, /sbin/, /lib/, /boot, /etc
+
 
 Gestion utilisateur
    -/home, /root
@@ -29,5 +36,17 @@ stockage des donnees
    -/var, -/tmp, /srv
 
 # heberger un projet html, css, javascript sur notre EC2 en utilisant les commandes linux
+
 # ssh
+
 /usr/share/nginx
+
+scp: secure copy protocol
+
+scp -i devops-100 fichier_a_envoyé machine virtuel: /home/ec2-user( i pour la sécurité )
+
+scp -i devops-100.pem templatemo_548_training_studio.zip ec2-user@ec2-13-61-176-228.eu-north-1.compute.amazonaws.com:/home/ec2-user
+
+mv templatemo_548_training_studio/* /usr/share/nginx/html/
+
+mv fichiers_copiés destination
