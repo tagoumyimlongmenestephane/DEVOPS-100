@@ -1,0 +1,24 @@
+#####27-07-2026####
+AWS CLI (AWS Command Line Interface) is an open-source tool provided by Amazon Web Services that allows you to control and automate AWS services directly from your terminal or shell scripts.
+i download the zip and install
+i create a script who i list all command automatisation
+list users-iam
+list aws s3
+list ec2
+list lambda:wq
+
+stock the result in a file
+
+|jq just to make a filter
+
+cron job: les crons jobs sont indispensables en administration système et en devops
+pour automater les tâches répétitives
+
+crontab -e, -l
+
+# automatiser Git avec shell scripting et API github
+
+CSVLOOK It is used to preview and format CSV files as clean, 
+aligned ASCII text tables directly in your terminal.
+ASCII is a standard character code created in the 1960s.
+read -p permet de récupérer les informations qu'un utilisateur va entrer

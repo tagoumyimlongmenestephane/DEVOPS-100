@@ -1,0 +1,132 @@
+aws code deploy
+
+ecrire du code: cloud9(vsc)
+manager et stocker le code: AWS CODE COMMIT( git et github)
+build et le test: aws codebuild
+deploy: aws codedeploy(automatiser)
+    ----> du travail
+    ----> error
+logging et le monitoring: cloudtrail et cloudwatch
+AWS CODEPIPELINE
+
+deploy/release  .......> EC2 ou lambda function
+
+plusieurs serveurs (deployment group)
+
+Pourquoi choisir AWS CodeDeploy ?
+
+AWS CodeDeploy est un service qui simplifie 
+et automatise le deploiement d'applications vers 
+différents environnement. comparons les méthodes
+de déploiement manuelles, basées sur des scripts, 
+et l'utilisation d'aws codeDeploy.
+
+1- Déploiement manuel (Manuel Deployment)
+Avec le manuel, vous déployez directement sur
+le serveur (avec des commandes manuelles).
+
+Inconvénients(Disadvantages):
+
+time-consuming
+ chaque étape doit être réalisée à la main
+error-prone
+ les erreurs humaines sont fréquentes.
+lack of consistency
+ le deploiement peut varier d'un environnement à l'autre
+inefficient ressource
+  le processus est peu optimisé.
+limited scability
+  Difficile à appliquer à de nombreux serveurs
+no rollback mechanism
+  Impossible d'annuler facilement un déploiement en cas de problème
+
+2- Déploiement avec scripts (Script-based Deployment)
+Vous écrivez du code pour automatiser le déploiement
+
+Disadvantages:
+
+écrire les scripts (write script):
+  cela demande du temps et des compétences
+complexity:
+  Plus l'application est grande, plus le script devient complexe.
+Gestion limitée des erreurs (limited error handling):
+  les scripts ne gèrent pas toujours bien les échecs.
+Manque de cohérence (inconsistency):
+  les résultats peuvent varier selon l'environnement.
+Pas de fonctionnalités avancées (lack of advanced feature)
+  comme le basculement de trafic.
+Evolutivité limitée (limited scalability)
+  Pas idéal pour de grandes infracstructures.
+Entretien lourd (maintenance overhead):
+  Les Scripts doivent être constamment mis à jour  
+
+ Avantages d'AWS CodeDeploy
+ Pourquoi choisir AWS CodeDeploy plutôt que d'autres outils ?
+
+ Supporte plusieurs types de déploiements
+ Facile à intégrer avec d'autres outils
+ Configuration simple (Easy to setup)
+ Personnalisation
+ Rollback facile
+ Gain de temps
+ Intégration fluide (Easy intégration)
+ Déploiement multi-environnements
+ basculement de trafic
+ Economique
+
+
+Stratégies de déploiement (Deployment Strategies)
+
+1 Blue/Green Deployment
+
+Création de deux environnements :
+   l'ancien (blue) et le nouveau (green).
+   une fois validé, le trafic est basculé
+   vers le nouvel environnement.
+
+2 Rolline Deployment
+  Mise à jour progressive des serveurs en déployant le code par lot.
+
+3 Canary Deployment
+  Déploiement sur une petite portion des serveurs pour tester avec
+  un déploiement complet
+
+4 Shadow Deployment
+  Déploiement silencieux pour surveiller le comportement de la 
+  nouvelle version sans affecter les utilisateurs
+
+5 A/B Deployment
+  Comparaison de 2 versions de l'application pour
+  évaluer laquelle est la meilleure
+
+6 Continuous Deployment
+  Automatisation complète : chaque changement validé dans le code
+  est immédiatement déployé.
+
+7 In-Place Deployment
+  Mise à jour directe sur les serveurs existants
+  sans créer de nouvel environnement
+    
+
+arn:aws:iam::456788080945:role/CodeDeployServiceRolel:mùĉ x
+
+Dans cet exercice, vous allez configurez AWS CodeDeploy en effectuant les étapes suivantes:
+
+Créer un compte AWS avec des permissions limitées. access programmatique(IAM)
+Configurer un rôle de service pour CodeDeploy.
+Restreindre les permissions attribuées à CodeDeploy
+Créer un profil d'instance IAM pour Amazon EC2
+
+ec2 ------> s3
+
+s3 -----> creer policies ------> attacher cela a un role qui est attache au service ec2
+
+Création d'un compte AWS avec un utilisateur IAM restreint
+Mise en place d'un rôle de service pour CodeDeploy
+Restriction des permissions accordées à CodeDeploy
+création d'un profil d'instance IAM pour EC2
+
+ Prochaines étapes:
+
+Installer l'argent CodeDeploy sur l'instance EC2.
+Deployer une première application avec AWS CodeDeploy

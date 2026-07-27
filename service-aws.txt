@@ -1,0 +1,7 @@
+aws cloud a plus de 200 services.
+
+1- EC2 qui fournit des machines virtuelles dans le cloud
+ advantage(haute scalability, flexibility, control total, integration facile avec d'autres services AWS)
+
+2- VPC(virtual private cloud)
+  

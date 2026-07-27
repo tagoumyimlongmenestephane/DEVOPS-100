@@ -1,0 +1,12 @@
+hurdle = obstacle
+layer = couche
+whatever = No matter what / peu importe ce que
+whenever = No matter whenever / quand tu veux
+whoever = No matter you / peu importe qui
+whichever = no matter which / peu importe lequel
+however = but / néanmoins, cependant, in any way(oeu importe comment)
+
+Today I:
+- Configured a cron job on an EC2 instance.
+- Fixed an IAM role permission error (iam:ListUsers).
+- Tested the connection to the web application.

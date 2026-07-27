@@ -59,9 +59,44 @@ BENEFICS DE AWS CODEBUILD
        5---> COST EFFECTIF  serverles(pay as you go)
 
 source ----> BUILD ----> TEST----> DEPLOY -----> MONITORING
+
 FAIT UN PROJET ---> REPO(GIT ET GITHUB) ---> AWS CODE BUILD ---> AWS S3 BUCKET(stockage)
 
 buildspec.yml version, install, pre_build, build, post_build et artefact
 
 SC(site statique)---> BUILD ----> Deploy (s3)
-                                                               
+
+app qu'on peut deployer
+       
+       app code
+       exe file
+       config file
+       zip, war, files
+
+AWS CodePipeline est un service qui automatise l'ensemble du processus
+de développement et de déploiement d'une application. il facilite le CI/CD.
+Un pipeline est un workflow défini qui contient plusieurs étapes menant à l'Automatisation
+du déploiement.                                           
+
+AWS CodePipeline est un outil puissant pour automatiser l'ensemble
+du processus CI/CD en réduisant le temps de livraison, en améliorant la fiabilité et en 
+minimisant les erreurs. Grâce à ses différents composants(stages, actions, exécutions, artefacts), il
+permet de simplifier et d'optimiser le cycle de vie du développement logiciel.
+
+
+Gunicorn(exécute Django, le cuisinier qui prépare les plats)
+Django(la recette utilisée par le cuisinier)
+Nginx(le serveur qui accueille les clients, les installe et prend les commandes)
+
+Exercice: Création d'un pipeline CI/CD avec AWS CodeDeploy,
+CodePipeline, CodeBuild et Github
+
+pourquoi le CI/CD est important?
+- Automatisation des tâches répétitives
+- Détection rapide des erreurs grâce aux tests automatisés
+- deploiement plus rapide et plus fiable des applications
+- Réduction des risques en production grâce aux tests et validations continus. 
+
+ruby est nécessaire car l'agent codeDeploy est bassé sur le Language ruby
+
+formation linux (quand un fichier termine avec D, c'est un fichier daemon)

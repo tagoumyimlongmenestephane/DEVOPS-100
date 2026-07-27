@@ -1,0 +1,47 @@
+monitoring et logging
+----creation des SERVICES
+-----> read, update, create, delete, etc....
+
+*** CLOUDTRAIL(enregistre les actions(qui a fait quoi, quand et où)) *** ET *** CLOUDWATCH(surveille les performances et les logs(comment les ressources fonctionnent)) ***
+
+*** > CLOUDTRAIL
+    QUI, QUOI, QUAND A CREE, SUPPRIME S3 BUCKET, INSTANCE EC2
+
+    90 JOURS ----> TRAIL -----> S3 BUCKET
+
+    ----> ALERT -------- CLOUDWATCH
+
+    -----> L'ANALYSE DES PERFORMANCES AVEC AMAZON ALTHENA
+
+
+MONITORING DANS CODEBUILD (AWW)
+
+---> ON PEUT AVOIR PLUSIEURS BUILD PROJECT (AWS ACCOUNT WISE)
+
+NOM, STATUS, DETAIL OU BUILD
+
+INDICATEUR DE PERFORMANCE:
+
+
+-----> CODEBUILD METRIC
+    - BUILD DURATION
+    - BUILD STARTTIME
+    - BUILD STATUS (FAILED, SUCCESS, IN PROGRESS)
+    - ENVIRONMENT USAGE
+    - PHASE DURATION
+    - PHASE STARTTIME
+    - PHASE STATUS
+    - DOWNLOADSOURCE DURATION
+    - QUEUED DURATION
+
+-----> RESSOURCES METRICS (CPU, MEMOIRE, STOCKAGE)
+    - CPUUTILIZED
+    - CPUUTILIZEDPERCENT
+    - MEMORYUTILIZED(RAM)
+    - MEMORYUTILIZEDPERCENT
+    - STORAGE READ BYTE (S3, EBS)
+    - WRITE
+
+-----> ALARMS
+    ---> FAILED BUILD
+    ---> DURATION

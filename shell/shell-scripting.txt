@@ -1,14 +1,29 @@
+le shell est une interface qui permet d'interagir avec le système d'exploitation via des commandes. Le scripting Shell permet d'automatiser ses commandes dans des scripts
 pourquoi quand je prends ps son ouput est envoyé dans le grep et quand je prends date son output es pas envoyé dans le grep
 -- son résultat est directement passé dans le standart output
 
 grep est le moteur de recherche interne de ton terminal
 set - est pour l'execution du shell scipting
 ps -- affiche les processus en cours
+| = pipe = tuyau
 
+trap sert à définir une action automatique lorsqu'un signal ou un évènement
+survient.
+
+find / -name
+
+sudo su
+
+wget est une commande Linux qui permet de télécharger des fichiers depuis Internet
+en ligne de commande. Elle prend en charge les protocles HTTP,HTTPS,FTP
+
+structures de controles 
+
+curl permet de récupérer des API
 questions d'entretiens en shell:
     1- commandes utilisées en shell
     2 - ecrire un script shell pour afficher la liste de processus
-     #!/bin/bash
+     #!/bin/bash 
      echo "Liste des processus en cours d'éxécution ;"
      ps -ef
 
@@ -29,3 +44,5 @@ questions d'entretiens en shell:
       2 - execution lente comparé au langage compilé comme C ou GO
       3 - Utilisation excessive des processus
       4 - Compléxité croissante ( tâche complexe, éxécuté avec python )
+ 
+ 
