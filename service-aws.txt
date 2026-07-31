@@ -5,3 +5,34 @@ aws cloud a plus de 200 services.
 
 2- VPC(virtual private cloud)
   
+3- EBS(elastic block store)(volume) ( stocké de façon permanente les données )
+
+4- s3 (simple storage service)(héberger des sites statiques)
+scalable(évolutif)
+
+5- IAM(Identity and access management)
+  gestion centralisé des access
+  Inconvénients(configuration complexe)
+
+6- cloudwatch (Monitoring) (surveilllance et logs) via Lambda(serveless), SNS
+
+7- cloudtrail(Gouvernance, compliance, Audit)(90 jours)
+    aws security hub(détection d'anomalie)
+
+8- Lambda (serveless computing)
+
+9- cloud build services(codebuild(jenkins), codedeploy, codepipeline) 
+
+10- aws config(audit de configuration)
+
+11- aws billing and costing
+
+12- aws KMS(key management service)
+
+13- aws EKS(Elastic Kubernetes services)
+
+14- aws ecs(elastic container services)
+
+15- aws fargate ecs en fargate mode
+
+16- ELK 9 elastic search(ela$ticsearch, logstash, kibana,)

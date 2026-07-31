@@ -1,0 +1,5 @@
+Un cluster Kubernetes (ou k8s), c’est tout simplement un ensemble de machines 
+(serveurs physiques ou machines virtuelles) regroupées pour exécuter et 
+gérer des applications conteneurisées (comme des conteneurs Docker) de 
+manière automatique.
+

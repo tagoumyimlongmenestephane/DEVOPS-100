@@ -1,0 +1,23 @@
+Azure DevOps est une plateforme complète développée par Microsoft qui 
+regroupe tous les outils nécessaires pour gérer le cycle de vie d'un 
+projet logiciel, de la première idée jusqu'au déploiement en production.
+
+Plutôt que d'utiliser un outil différent pour chaque tâche 
+(Jira pour la gestion, GitHub pour le code, Jenkins pour le CI/CD), 
+Azure DevOps rassemble tout dans un seul écosystème modulaire. 
+
+Azure et AWS sont les deux plus grandes plateformes de cloud computing. 
+Elles proposent quasiment les mêmes services, mais avec des différences 
+dans leur écosystème, leur interface et leur intégration.
+
+AWS - Azure
+Créé par Amazon	Créé - par Microsoft
+Leader historique du marché - Deuxième plus grand acteur
+Très populaire chez les startups et les entreprises technologiques - Très populaire dans les grandes entreprises utilisant déjà Microsoft
+Interface AWS Management Console - Interface Azure Portal
+
+AWS - Azure - GCP
+AWS, Azure et GCP sont les trois principaux fournisseurs de cloud computing.
+Ils proposent pratiquement les mêmes types de services (machines virtuelles, 
+stockage, bases de données, Kubernetes, serverless, etc.), mais 
+avec des différences d'écosystème, d'intégration et de positionnement.

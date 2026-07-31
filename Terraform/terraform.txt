@@ -1,0 +1,7 @@
+TERRAFORM
+
+INFRASTRUCTUR AS CODE(IAC) gérer une infrastructure à l'aide de fichiers de 
+configuration plutôt manuellement.
+Terraform is the most popular IaC tool for creating infrastructure.
+
+l'extension est .tf

@@ -5,6 +5,9 @@ whenever = No matter whenever / quand tu veux
 whoever = No matter you / peu importe qui
 whichever = no matter which / peu importe lequel
 however = but / néanmoins, cependant, in any way(oeu importe comment)
+gérer = manage
+outil push = push tool
+deepened = approfondir 
 
 Today I:
 - Configured a cron job on an EC2 instance.

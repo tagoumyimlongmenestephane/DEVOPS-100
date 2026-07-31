@@ -1,0 +1,55 @@
+Ansible(service de gestion de configuration, simple et puissant)
+Ansible(simplixité,flexible)
+Puppet(plus complexe,outil pull) et Ansible(outil push)
+
+Ansible est un outil open source d'automatisation d'IT, orchestrer les tâches sur plusieurs serveurs sans hook.
+
+connexions SSh sans mot de passe: on génère une clé avec le "ssh key-gen" et on copie cette clé dans la machine cible
+
+inventaire ansible est un fichier qui contient un groupe de serveur sur lequel
+Ansible doit exécuter les playbooks.
+
+un rôle ansible est une façon d'organiser un projet Ansible en séparant les
+différentes tâches dans une structure de données standar
+
+différence entre un dossier tasks et handlers dans un rôle: un dossier tasks/
+contient les tâches exécutées dans l'ordre où elles apparaissent.
+handlers/ contient des tâches qui ne s'exécutent que lorsqu'elles sont
+déclenchées par une notification.
+
+comment déburger un playbook ansible
+
+Ansible fonctionne en utilisant un fichier d'inventaire qui liste les
+serveurs à gérer et en exécutant des playbooks contenant les
+tâches d'automatisation. 
+
+QUESTIONS D'ENTRETIEN:
+- language de programmation utilisé pour développer Ansible? Python
+- Ansible supporte t'il linux et windows? si oui quel protocol est utilisé?
+Oui via SSH pour Linux et WinRM pour Windows.
+- différence entre Ansible et Puppet?
+ Ansible est un outil push tandis que Puppet est un outil pull
+- Pourquoi choisir Ansible?
+Simplicité, agentless, utilisation de YAML
+- Quels clouds sont supportés par Ansible?
+AWS, Azure, GCP, etc 
+
+1️⃣ Pourquoi la Gestion de Configuration est Essentielle ?
+✅ Automatiser l’administration des serveurs
+✅ Standardiser et sécuriser les environnements
+✅ Gérer l’infrastructure à grande échelle avec facilité
+
+le playbooks est fichier YAML qui décrit les tâches à éxécuter sur une
+machine virtuelle tandis que les ad-hoc sont des commandes qui 
+permettent d'éxécuter des actions simples. si les actions sont
+simples(ad-hoc)
+
+// j'ai pas pu connecter une machine avec une autre
+
+ad-hoc: ansible -i inventory all shell "touch /tmp/devops-tuto.sh"
+
+run a playbooks: ansible-playbook -i inventory install-nginx.yml 
+
+// installer nginx sur la machine hôte
+
+un rôle ansible

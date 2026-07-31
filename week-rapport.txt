@@ -21,4 +21,19 @@ crontab -e, -l
 CSVLOOK It is used to preview and format CSV files as clean, 
 aligned ASCII text tables directly in your terminal.
 ASCII is a standard character code created in the 1960s.
+
 read -p permet de récupérer les informations qu'un utilisateur va entrer
+
+#Ansible
+
+Ansible(service de gestion de configuration, simple et puissant)
+Ansible(simplixité,flexible)
+Puppet(plus complexe,push) et Ansible(pull)
+
+Ansible fonctionne en utilisant un fichier d'inventaire qui liste les
+serveurs à gérer et en exécutant des playbooks contenant les
+tâches d'automatisation.
+
+créer un rôle: ansible-galaxy init kubernetes
+
+* différence entre Azure et AWS
