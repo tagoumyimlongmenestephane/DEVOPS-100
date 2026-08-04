@@ -7,7 +7,11 @@ whichever = no matter which / peu importe lequel
 however = but / néanmoins, cependant, in any way(oeu importe comment)
 gérer = manage
 outil push = push tool
+remote = distant
 deepened = approfondir 
+obsolète = deprecated
+huge = énorme
+breaking down into = décomposer
 
 Today I:
 - Configured a cron job on an EC2 instance.

@@ -1,0 +1,14 @@
+architecture serveur: EC2(OS,NG,APACHE,RAM,CPU), scaling automatiquement, latence froide
+app monolitique(backend, frontend)
+
+architecture serveless: tu ne configures rien (OS,CPU,RAM), ici on doit
+utiliser un lambda function, latence rapide, microservice(A microservice is a software architecture method that consists of 
+breaking an application down into multiple small, independent services, where each service handles a single, specific function.)
+
+quand choisir l'un des deux?
+
+serveless: facturé aux temps d'éxécution
+
+server: facturé quand le system est allumé
+
+plus 1 million fois/s c'est mieux le serveur, moins c'est le serveless

@@ -12,7 +12,7 @@ stock the result in a file
 |jq just to make a filter
 
 cron job: les crons jobs sont indispensables en administration système et en devops
-pour automater les tâches répétitives
+pour automatiser les tâches répétitives
 
 crontab -e, -l
 

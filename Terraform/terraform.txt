@@ -4,4 +4,42 @@ INFRASTRUCTUR AS CODE(IAC) gérer une infrastructure à l'aide de fichiers de
 configuration plutôt manuellement.
 Terraform is the most popular IaC tool for creating infrastructure.
 
-l'extension est .tf
+l'extension est .tf,
+
+pourquoi utiliser dynamo db?
+S3 permet de stocker le fichier d'état, mais il ne fournit pas de mécanisme de 
+verrouillage adapté aux opérations concurrentes. DynamoDB apporte cette protection.
+S3 : stockage du fichier terraform.tfstate.
+DynamoDB(no SQL Database) : verrouillage de l'état(la mémoire de l'infracstructure qu'il a créé) pour éviter les modifications simultanées.
+Avantage : sécurité, cohérence et travail collaboratif sans risque de corruption du fichier d'état.
+
+
+Bonnes pratiques:
+ - Never store the Terraform state file locally or on GitHub.
+ - Use a remote backend (e.g., AWS S3 with DynamoDB for state locking).
+ - Never modify the state file manually.
+
+Bonnes pratiques avec Terraform
+ - Use modules to organize your code.
+ - Separate your code into main.tf, variables.tf, and outputs.tf files.
+ - Version your Terraform files using Git.
+ - Run terraform plan before executing terraform apply.
+
+ à partir de Terraform v1.10+ on a introduit un système de verouillage natif pour 
+ le s3 (use_lockfile = true) et a rendu l'utilisation d'une Table dynamoDB obsolète(deprecated)
+ pour le backend s3.
+
+9. Problèmes courants avec Terraform
+   le fichier d'éat est la source unique de vérité
+   les modifications manuelles de "ressources cloud ne sont pas détectées automatiquement
+   Ne s'intègre pas facilement avec les outils GitOps(FluxCD, ArgoCD)
+   Complexité croissante avec des infracstructure volumineuses.
+   Difficile à utiliser comme outil de gestion de configuration
+
+10. Questions d'entretien Terraform
+Qu'est ce qu'un module dans Terraform? Un module dans Terraform est simplement un ensemble de fichiers de 
+configuration Terraform (.tf) regroupés dans un même dossier.(Réutilisabilite, lisibilité, Standardisation)
+
+Comment configurer Terraform?
+Rôle de s3 et DynamoDB dans Terraform?
+quelques commandes essentielles de Terraform?
