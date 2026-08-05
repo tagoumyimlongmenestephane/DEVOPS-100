@@ -12,6 +12,13 @@ deepened = approfondir
 obsolète = deprecated
 huge = énorme
 breaking down into = décomposer
+mandatory = obligatoire
+backup = sauvegarder
+snapshot = instantané
+réseau privé = private network
+dans les deux sens = in both direction
+available = disponible
+Inbound rules, Outbound rules
 
 Today I:
 - Configured a cron job on an EC2 instance.
