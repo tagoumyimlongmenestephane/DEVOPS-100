@@ -18,9 +18,25 @@ snapshot = instantané
 réseau privé = private network
 dans les deux sens = in both direction
 available = disponible
+enable = désactiver
 Inbound rules, Outbound rules
+over time = au fil du temps
+figure out(arriver à comprendre) = understand
+you are in trouble = tu as des ennuis
+it's up to us = c'est à nous/ ça dépend de nous
+struggle = lutte
+overly = trop
+load Balancer = équilibreur de charge
+overload = surcharge
+haute disponibilité = high avalability
+within = au sein
+strip away = débarassé
+cross-border = transfrontalier
+indeed = en effet, effectivement
+
 
 Today I:
 - Configured a cron job on an EC2 instance.
 - Fixed an IAM role permission error (iam:ListUsers).
 - Tested the connection to the web application.
+

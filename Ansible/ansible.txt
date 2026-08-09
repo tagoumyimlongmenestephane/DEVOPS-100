@@ -10,7 +10,7 @@ inventaire ansible est un fichier qui contient un groupe de serveur sur lequel
 Ansible doit exécuter les playbooks.
 
 un rôle ansible est une façon d'organiser un projet Ansible en séparant les
-différentes tâches dans une structure de données standar
+différentes tâches dans une structure de données standard.
 
 différence entre un dossier tasks et handlers dans un rôle: un dossier tasks/
 contient les tâches exécutées dans l'ordre où elles apparaissent.
@@ -39,12 +39,8 @@ AWS, Azure, GCP, etc
 ✅ Standardiser et sécuriser les environnements
 ✅ Gérer l’infrastructure à grande échelle avec facilité
 
-le playbooks est fichier YAML qui décrit les tâches à éxécuter sur une
-machine virtuelle tandis que les ad-hoc sont des commandes qui 
-permettent d'éxécuter des actions simples. si les actions sont
-simples(ad-hoc)
+ 
 
-// j'ai pas pu connecter une machine avec une autre
 
 ad-hoc: ansible -i inventory all shell "touch /tmp/devops-tuto.sh"
 

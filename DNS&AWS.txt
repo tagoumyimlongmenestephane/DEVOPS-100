@@ -1,1 +1,9 @@
-DNS(Domain Name System) est le sytème utilisé pour traduire
+DNS(Domain Name System) est le sytème utilisé pour traduire les noms de domaine(ex: google.com)
+en adresses IP compréhensibles par les ordinateurs(ex: 142.250.190.14)
+
+sans DNS, tu serais obligé de renir les adresses IP pour chaque site.
+
+Amazon Route 53 est un service DNS managé de AWS.
+
+il permet de :
+- Enregistrement et gestion des noms de domaine.

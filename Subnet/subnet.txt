@@ -1,0 +1,80 @@
+
+
+VPC (Virtual Private Cloud) : C'est un réseau virtuel isolé et sécurisé dans le cloud AWS 
+où vous pouvez déployer vos ressources informatiques. C'est l'équivalent d'un datacenter 
+virtuel dans le cloud.
+
+Analogie : Imaginez un VPC comme un immeuble virtuel :
+
+  Le VPC = l'immeuble entier
+  Les sous-réseaux = les différents étages
+  Les instances EC2 = les appartements
+  Les Security Groups = les serrures des portes
+
+
+La commande scp -i sert à copier des fichiers ou des dossiers de manière sécurisée 
+entre deux machines à travers le réseau (via le protocole SSH), en utilisant une clé 
+privée d'authentification spécifique plutôt qu'un mot de passe.
+
+VPC(Subnet public(nginx,apache) et private(DB,data base))
+
+résumé: CIDR, Subnets, NACL, Table Routine, Sécurity Group, Internet Get Way, NAT
+
+Internet Get Way(IGW)(passerelle Internet) est le point de sortie et d'entrée qui
+relie un réseau privé à l'internet public.
+
+Dans le Cloud (ex. AWS, GCP) : Une Internet Gateway est un composant virtuel que l'on attache à un réseau virtuel 
+(VPC) pour permettre aux serveurs qui y sont hébergés d'accéder à Internet et d'être accessibles depuis l'extérieur.
+
+Le NACL(Network Access Control List)(pare-feu au niveau du subnet)
+il contrôle le trafic entrant et sortant, il est stateless(les règles doivent 
+être définies dans les deux sens).
+
+Un Security Group est un pare-feu virtuel qui contrôle le trafic réseau entrant 
+et sortant au niveau d'une ressource(comme une instance EC2 ou un serveur virtuel
+dans le cloud)
+
+
+Le NAT(Network Address Translation) est un mécanisme qui permet à plusieurs appareils
+d'un réseau privé d'utiliser une seule adresse IP publique pour naviguer sur Internet.
+
+Le CIDR(Classless Inter-Domain Routing) est une méthode de notation et d'allocation des
+adresses IP qui permet de définir un sous-réseau et d'indiquer combien d'adresses IP
+uniques y sont disponibles. On le reconnaît à sa forme caractéristique : 
+une adresse IP suivie d'une barre oblique et d'un nombre (par exemple : 192.168.1.0/24).
+
+notation CIDR:
+  Une adresse IPv4 est composée de 32 bits au total
+  Dans la notation 192.168.1.0/24, le nombre après le slash (/24) est appelé le masque de sous-réseau. 
+  Il indique le nombre de bits fixés (la partie réseau).
+  Les 24 premiers bits identifient le réseau (ils ne bougent pas).
+  Les 8 bits restants ($32 - 24 = 8$) servent à numéroter les appareils dans ce réseau.
+  Pour calculer le nombre d'adresses disponibles : $2^8 = 256$ adresses (de 192.168.1.0 à 192.168.1.255).
+
+
+Un Auto Scaling Group (ASG) est un composant cloud (très populaire sur AWS) qui permet d'ajuster automatiquement 
+le nombre de serveurs (instances EC2) en fonction de la charge de votre application et de maintenir son état de santé.
+
+un load balancer(scaoable, Haute disponibilité, éviter la surcharge d'un seul serveur)
+
+projet:
+
+Une Elastic IP Address (ou IP Élastique) sur AWS est une adresse IPv4 publique statique réservée à votre compte 
+cloud, qui ne change jamais tant que vous ne la supprimez pas.
+
+
+Projet:
+  Cet exemple démontre comment créér un VPC que vous pouvez utiliser pour des serveursdans un environnement de production.
+  Pour améliorer la résilience, vous déployez les serveurs dans deux zones de disponibilité, en utilisant un groupe
+  d'auto-scalabilité(auto scaling group) et un équilibreur de charge d'application(Application Load Balancer).
+  Pour plus de sécurité, vous déployez les serveurs dans des sous-réseaux privés. Les serveurs recoivent les requêtes via l'équilivreur de charge.
+  Les serveurs peuvent de connecter à internet en utilisant une passerelle NAT(NAT Gateway)
+  Pour améliorer la résilience, vous déployez la passerelle NAT dans les deux zones de disponibilité.
+
+Apercu:
+  Le VPC contient des sous-réseaux publics et privés répartis dans deux zones de
+  disponibilité. Chaque sous-réseau public contient une passerelle NAT et un noeud
+  de l'équilibreur de charge. Les serveurs, éxécutés dans les sous-réseaux privés, sont
+  lancés et arrêtés à l'aide d'un groupe d'auto scalabilité et reçoivent le trafic de l'équilibreur de charge.
+  Les serveurs peuvent se connecter à internet via la passerelle NAT.
+   

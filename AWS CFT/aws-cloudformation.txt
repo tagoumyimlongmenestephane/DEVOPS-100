@@ -1,0 +1,34 @@
+objectif du cours: Comprendre comment utiliser AWS Cloudformation pour créer et gérer l'infrastructure
+AWS en tant que code(IAC - infrastructure as Code), comparer CFT avec AWS CLI et Terraform,
+découvrir les composants d'un template CFT, et apprendre à rédiger et utiliser un template YAML.
+
+CloudFormation est un service AWS qui permet de modéliser et provisionner des ressources AWS à l'aide
+de fichiers de configuration (template) en YAML ou JSON. C'est une solution déclarative (on décrit l'état final 
+voulu de l'infrastructure)
+
+disponible seulement sur AWS
+
+Avantage principal:
+...
+
+2. Différence entre AWS CLI et AWS CloudFormation
+
+AWS CLI(Outil en ligne de commande, Impérative(étape par étape), Actions rapides(Listes s3, EC2),
+Commandes shell)
+
+AWS CloudFormation(Service de gestion d'infrastructure, Déclarative, Déploiement d'architecture complète, YAML ou JSON)
+
+CloudFormation utilisé pour déployez plusieurs ressources interconnectées.
+
+composants d'un template CloudFormation:
+...
+
+une Stack est un regroupement logique de ressources AWS créées à partir d'un template CloudFormation.
+
+Exemple: Une stack "WebApp" pourrait contenir:
+
+- un VPC
+- Une instance EC2
+- un RDS
+- un ELB
+- des Security Groups

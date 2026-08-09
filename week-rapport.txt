@@ -36,4 +36,3 @@ tâches d'automatisation.
 
 créer un rôle: ansible-galaxy init kubernetes
 
-* différence entre Azure et AWS

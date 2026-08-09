@@ -1,0 +1,108 @@
+1. Conception VPC pour une application 2-tier
+
+Question: Vous devez concevoir une architecture VPC pour une application à deux niveaux(2-tier).
+L'application doit être hautement disponible et évolutive. Comment concevriez-vous la VPC?
+
+Réponse:
+- Utiliser plusieurs zones de disponibilité (AZ)
+- Sous réseaux publics pour les serveurs web
+- Sous réseaux privés pour les bases de données
+- Load Balancer et Auto Scaling groupe
+- NAT Gateway pour l'accés Internet des instances privées
+
+2. Restreindre l'accès Internet par sous-réseau
+
+Question:
+Votre organisation possède un VPC avec plusieurs sous-réseaux. Vous souhaitez restreindre l'accès Internet
+sortant pour un sous-réseau tout en le permettant pour un autre. Comment procéser ?
+
+Réponse:
+- Modifier les tables de routage
+- IGW uniquement pour les sous-réseaux autorisés
+- Possible d'utiliser des NACLs pour plus de contrôle
+
+3. Accès Internet depuis un sous réseau privées
+
+Question:
+Vous avez une VPC avec un sous-réseau public et un sous-réseau privé. les instances 
+dans le sous-réseau privé doivent accéder à Internet pour des mises à jour logicielles.
+Comment faire ?
+
+Réponse:
+- Ajouter une NAT Gateway dans le sous-réseau public
+- Mettre à jour la table de routage du sous réseau privé vers la NAT Gateway
+
+4. Communication entre instances EC2
+
+Question:
+vous avez lancé des instances EC2 dans votre VPC et souhaitez qu'elles communiquent entre elles via
+leurs IP privées. Quelles étapes suivre?
+
+Réponse:
+- Vérifier qu'elles sont dans le même VPC
+- Configurer Security Groups et routes
+- Pas besoin d'IGW pour la Communication interne
+
+5. Contrôle réseau strict
+Question:
+vous voulez appliquez un contrôle réseau strict à vos ressources VPC. Comment faire?
+
+Réponse:
+- Configurer les Security Groups
+- Utiliser des NACLs pour bloquer de manière restrictive
+- Eviter les règles trop permissives comme 0.0.0/0
+
+6. Environnement isolé pour charges sensibles
+
+Question:
+Votre organisation a besoin d'un Environnement isolé dans le VPC pour exécuter des
+workloads sensibles. Comment procéder?
+
+Réponse:
+- Créer un sous-réseau privé sans IGW
+- NACLs restrictives
+- Accès uniquement via des VPC uniquement
+
+7- Accès sécurisé à s3 depuis un VPC
+
+Question:
+Votre application doit accéder à des services AWS comme s3 de façon sécurisée
+depuis votre VPC. Comment faire?
+
+Réponse:
+- Créer un VPC Endpoint (type Gateway ou Interface)
+- Eviter de passer par Internet
+- Utiliser des IAMs Policies adaptées
+
+8- Différence entre NACL et sous-réseau
+
+Question:
+Quelle est la différence entre un NACL et un sous réseau ? Donnez un exemple d'utilisation.
+
+Réponse:
+- NACL: contrôle de trafic au niveau du sous-réseau
+- Sous-réseau: segment logique du VPC
+
+Exemple: Bloquet tout trafic vers un subnet contenant une base de données sensible
+
+9- IAM: Users, Groups, Roles, Policies
+
+Question:
+Quelle est la différence entre IAM users, groups, roles et policies ?
+
+Réponse:
+- User: Utilisateur avec identifiants propres
+- Group: groupe d'Utilisateurs avec permission communes
+- Role: permissions temporaires pour services ou Utilisateurs
+- Policy: document JSON qui définit les permissions
+
+10- Accès sécurisé à un sous-réseau privé
+
+Question:
+Vous avez un sous-réseau privé avec des instances sans accès direct à Internet. Mais
+vous devez y accéder pour l'administration. Comment faire ?
+
+Réponse:
+- Déployez un Bastion Host dabs un sous-réseau public
+- Accès aux instances privées via SSH depuis le Bastion
+- Sécurisation du Bastion par IP et Security Groups
