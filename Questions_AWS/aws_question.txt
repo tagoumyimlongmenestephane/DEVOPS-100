@@ -106,3 +106,5 @@ Réponse:
 - Déployez un Bastion Host dabs un sous-réseau public
 - Accès aux instances privées via SSH depuis le Bastion
 - Sécurisation du Bastion par IP et Security Groups
+
+sudo usermod -aG docker add to the group

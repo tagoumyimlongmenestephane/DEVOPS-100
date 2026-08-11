@@ -1,10 +1,21 @@
-AWSTemplateFormatVersion: '2010-09-09'
-
+# AWSTemplateFormatVersion: '2010-09-09'
 Description: Cloudformation template to create an S3 bucket with private access control.
 
 Resources:
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: my-s3-youtube-bucket-test
-      AccessControl: Private
+      # Optionnel : Assurez-vous que ce nom soit unique au monde !
+      BucketName: my-s3-youtube-bucket-test-100
+      
+      # Désactive les ACLs (Recommandé par AWS)
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+
+      # Bloque explicitement tout accès public
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true

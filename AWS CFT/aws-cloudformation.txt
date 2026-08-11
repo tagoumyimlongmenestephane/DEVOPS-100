@@ -32,3 +32,24 @@ Exemple: Une stack "WebApp" pourrait contenir:
 - un RDS
 - un ELB
 - des Security Groups
+
+Qu'es ce que le Drift dans CloudFormation ?
+
+Le drift (dérive en francais) désigne une différence entre l'état réel d'une ressource
+dans AWS et l'état attendu décrit dans le template CloudFormation.
+
+Autrement dit:
+
+Quand quelqu'un modifie manuellement une ressource(via AWS Console ou CLI) sans
+passer par le template CFT, il y a un drift.
+
+Pourquoi c'est important
+...
+
+Comment utiliser la détection de drift ?
+
+1. via la console AWS
+
+2. via AWS CLI
+
+Comparaison CloudFormation vs Terraform

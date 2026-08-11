@@ -1,0 +1,32 @@
+Conteneur c'est une technologie qui nous permet de déployer les applications de façon isolées.
+
+un fichier docker qui finit avec d est un fichier qui s'exècute en arriere plan (fichier démon)
+
+docker compose est un outil qui permet de définir et de gérer des applications multi-conteneurs.
+
+
+Analogie : Si une image est un instrument de musique, Docker Compose est le chef d'orchestre
+qui indique comment tous les instruments jouent ensemble (réseau commun, volumes de stockage, 
+variables d'environnement, ordre de démarrage).
+
+Image Docker est un fichier qui contient tout ce dont ton application a besoin pour
+s'exécuter. c'est comme la recette de cuisine ou le moule.
+
+Différence entre Conteneurs vs Machines Virtuelles
+...
+
+pourquoi les conteneurs sont-ils légers?
+...
+
+Docker est une plateforme de containerisation. Elle permet de:
+
+- Créer des images Docker avec docker build
+- Lancer des conteneurs avec docker run
+- Partager des images avec docker push
+- docker pull sert à télécharger une image Docker depuis un registre (comme Docker Hub) vers ton ordinateur.
+
+La containerisation est une technologie. Docker est une implémentation.
+
+Dockerfile est un fichier listant les étapes de construction d'une image.
+
+docker ps liste de conteneurs qui tournent

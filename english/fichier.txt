@@ -33,6 +33,8 @@ within = au sein
 strip away = débarassé
 cross-border = transfrontalier
 indeed = en effet, effectivement
+tweak = ajuster
+trigger = déclencheur
 
 
 Today I:

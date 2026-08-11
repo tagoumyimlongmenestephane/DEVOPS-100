@@ -1,0 +1,22 @@
+ECR signifie Elastic Container Registry.
+C'est un service AWS qui permet de stocker, gérer et partager des images Docker.
+
+. Elastic: signifie que le service est hautement évolutif et disponible, comme EC2.
+. Container: car il s'agit de gérer des conteneurs Docker.
+. Registry: comme DockerHub, c'est un registre d'images Docker.
+
+Un registre est un espace de stockage pour les images Docker. Il facilite le partage et
+la distribution des conteneurs.
+
+Comparaison: ECR vs DockerHub
+
+ECR(facturé selon le stockage, sécurité AWS(IAM, policies, etc.)), 
+DockerHub(gratuit, sécurisé basique)
+
+ECR est idéal pour les entreprises déjà dans l'écosystème AWS. Il offre plus
+de contrôle, sécurité et intégration que DockerHub.
+
+
+
+
+
