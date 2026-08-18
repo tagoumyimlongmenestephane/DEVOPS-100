@@ -35,6 +35,10 @@ cross-border = transfrontalier
 indeed = en effet, effectivement
 tweak = ajuster
 trigger = déclencheur
+périphérique = device
+driver = pilote
+
+
 
 
 Today I:

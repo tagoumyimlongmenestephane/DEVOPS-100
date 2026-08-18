@@ -1,0 +1,84 @@
+1. Qu'es ce que Docker?
+
+Docker est une plateforme open source permettant de développer, expédier et exécuter des 
+applications dans des conteneurs. Un COnteneur est un logiciel contenant tout le nécessaire
+pour exécuter une application: code, bibliothèques, dépendances et configurations.
+
+
+2. Quelle est la différence entre les conteneurs et les machines virtuelles?
+...
+
+3. Quel est le cycle de vie d'un conteneur Docker ?
+ 3.1 Create
+     start
+     run
+     pause
+     stop
+     kill
+     remove
+
+4. Quels sont les différents composants de Docker?
+
+Docker Client: Interface CLI pour interagir avec Docker
+Docker Daemon: Service exècutant en arrière-plan
+Docker Images: Modèle à partir duquel un conteneur est créé
+Docker Containers: Instance des Images
+Docker Registry: Stocke les images (Docker Hub)
+Dockerfile: Script de construction d'une image
+
+5. Quelle est la différence entre copy et add?
+...
+
+6. Différence entre cmd et entrypoint?
+
+CMD: spécifie la commande par défaut, mais peut être écrasée
+ENTRYPOINT: spécifie la commande principale, difficilement écrasable
+
+exemple:
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
+
+cela exècutera python app.py
+
+7. types de réseaux de docker?
+bridge, host, none, overlay
+
+8. Comment isoler les réseaux entre conteneurs?
+
+créer un réseau personnalisé avec docker network Create
+
+Assigner chaque conteneur à un réseau différent:
+
+docker network Create monreseau
+docker run -d --name conteneur1 --network=monreseau nginx
+
+9. Qu'es ce que le build multi-étapes (multi-stage build) ?
+C'est une technique permettant de séparer les phases de build et d'exécution pour produire une image final légère.
+
+FROM node:18 AS build
+WORKDIR / app
+COPY . .
+RUN npm install && npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist  /usr/share/nginx/html
+
+10. Qu'es ce qu'une image "Distroless"?
+
+Ce sont des images dépourvues de système d'exploitation complet(pas de shell, pas de
+gestionnaire de paquets.) Elles n'incluent que les dépendances essentielles pour exécuter
+l'application, rendant l'image plus sûre et plus légère.
+
+11. Défis rencontrés en production avec docker
+- Point de défaillance unique: Docker Daemon est un processus unique, sa panne
+arrête toutes les applications
+- Exécution en tant que root: Problème de sécurité si compromis
+- Problèmes de ressources: Si trop de conteneurs tournent sur une petite machine.
+
+12. Quelles mesures prendre pour sécuriser les conteneurs
+- Utiliser des images distroless ou optimisées
+- Configurer réseaux personnalisés pour isoler les Conteneurs
+- Scanner les images avec des outils comme snyk, trivy
+- Appliquer le principe du moindre privilège
+- Signer et vérifier les images (Content Trust)

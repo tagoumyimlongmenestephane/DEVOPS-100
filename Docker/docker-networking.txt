@@ -1,0 +1,37 @@
+Quand vous créez un conteneur Docker, celui est connecté à un réseau virtuel.
+
+
+pilotes de réseau Docker:
+
+bridge: Réseau privé par défaut pour les conteneurs sur un même hôte.*
+
+host: Utilise directement le réseau de l'hôte sans isolation
+
+overlay: Réseau multi-hôtes pour les clusters Swam
+
+none: conteneur sans réseau
+
+docker network ls
+
+docker network create nom_du_reseau
+
+docker network rm nom_du_reseau
+
+docker run -dit --name app4 --network=host alpine
+
+/* Ethernet et wi-fi */
+
+Ethernet -> connexion avec un câble, généralement plus stable et plus rapide.
+
+Wi-Fi → connexion sans fil, plus pratique mais parfois moins stable.
+
+
+.txt → simple texte, sans mise en forme.
+.md → texte structuré et mis en forme grâce à Markdown.
+
+bonnes pratiques:
+
+- Utiliser des réseaux personnalisés pour éviter les collisions.
+- Ne jamais exposer des ports non nécessaires
+- Limitez les permissions (utilisez des utilisateurs non-root dans les conteneurs)
+- Monitorez les connexions inter-containers avec docker network inspect.

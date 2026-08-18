@@ -6,7 +6,7 @@ docker compose est un outil qui permet de définir et de gérer des applications
 
 
 Analogie : Si une image est un instrument de musique, Docker Compose est le chef d'orchestre
-qui indique comment tous les instruments jouent ensemble (réseau commun, volumes de stockage, 
+qui indique comment tous les instruments jouent ensemble (réseau commun, volumes de stockage,
 variables d'environnement, ordre de démarrage).
 
 Image Docker est un fichier qui contient tout ce dont ton application a besoin pour
@@ -30,3 +30,30 @@ La containerisation est une technologie. Docker est une implémentation.
 Dockerfile est un fichier listant les étapes de construction d'une image.
 
 docker ps liste de conteneurs qui tournent
+
+
+Cours complet: Multi-stage Build() & Distroless(une image Docker sans OS, avantage: taille réduite)
+
+ Objectifs :
+
+ Comprendre les Multi-stage builds
+
+ Apprendre ce qu'est une image Distroless
+
+ Construire une image sécurisée, légère et optimisée pour une app Django
+
+ Mettre en pratique avec un exemple réel Django + Docker
+
+
+
+# Bind Mount vs Volume
+
+
+docker run -it --rm -v test_volume:/data alpine sh
+
+docker volume inspect test_volume
+
+différence entre Bind Mount et Volume
+
+...
+

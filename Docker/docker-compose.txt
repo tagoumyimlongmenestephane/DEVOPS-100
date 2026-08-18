@@ -1,0 +1,70 @@
+Docker permet de créer, exécuter et gérer des conteneurs facilement. mais lorsqu'on commence
+à constuire une application plus complexe, on se heurte à plusieurs limites:
+
+Limite (Applications multi-conteneurs, configuration complexe, orchestration minimale)
+
+solution: Docker compose
+
+Docker compose est un outil de Docker qui permet de définir et de gérer plusieurs 
+conteneurs dans un seul fichier(docker-compose.yml)
+
+son but:
+
+- Décrire toute l'infracstructure d'une application dans un fichier unique.
+- Lancer toute l'infracstructure d'un seul coup (docker compose up)
+- Faciliter la gestion des réseaux, volumes et environnements multi-conteneurs.
+
+3. Pourquoi Docker Compose est important?
+
+Faciliter le développement
+
+5. structure d'un fichier docker-compose.yml:
+
+Version: '3.8'
+
+services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://user:password@database:5432/myapp
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - database
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:
+
+
+Une image a besion d'un volume, d'un réseau et des variables d'environnement.
+
+7. Inconvénients:
+pas fait pour la production à grande échelle, pas de réplication automatique, gestion basique des erreurs
+
+8. Différence entre Docker Compose, Swarm et Kubernetes.
+
+
+
+résumé:
+
+Docker seul = trop simple pour projet sérieux
+
+Docker compose = idéal pour dev multi-conteneurs
+
+docker swarm = premier pas en orchestration
+
+kubernetes = orchestration avancée pour production géante
+
+
+les commandes pour docker-compose:
